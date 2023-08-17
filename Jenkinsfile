@@ -15,7 +15,7 @@ pipeline {
 
       stage ('Unit-Tests') {
         steps {
-          echo 'Unit-Tests'
+          sh 'sonar-scanner -Dsonar.host.url=http://172.31.92.0:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=dispatch'
         }
       }
 
